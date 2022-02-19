@@ -70,16 +70,14 @@ int main() {
     };
 
     /*
-    m[0] = {
-        m[0].title = "AHHA",
-        m[0].artist = "Nate Ruess",
-        m[0].rating = 8
-    };
-    m[1] = {
-        m[1].title = "Runaway",
-        m[1].artist = "Kanye West",
-        m[1].rating = 9->이런 형식으로 해야한다..
-    };
+    // other way... 
+    m[0].title = "AHHA",
+    m[0].artist = "Nate Ruess",
+    m[0].rating = 8
+    
+    m[1].title = "Runaway",
+    m[1].artist = "Kanye West",
+    m[1].rating = 9->이런 형식으로 해야한다..
     */
     Rec(&m[5]);//추천
     
