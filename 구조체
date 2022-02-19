@@ -9,15 +9,9 @@ typedef struct {
     unsigned int rating;
 } MyMusic;
 
-struct Position {
-    int x;
-    int y;
-} p;
-
 void Rec(MyMusic* i) {
     i->rating += 1; // (*i).rating보다 표현하기 쉬운 방법.
     printf("Recommended! -> %s\n\n", i->title);
-    
 }
 
 
