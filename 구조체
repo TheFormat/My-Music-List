@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+
 typedef struct {
     char title[100];
     char artist[100];
@@ -17,6 +19,7 @@ void Rec(MyMusic* i) {
     printf("Recommended! -> %s\n\n", i->title);
     
 }
+
 
 int main() {
     MyMusic m[10] = {
