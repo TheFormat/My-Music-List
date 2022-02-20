@@ -1,10 +1,10 @@
 import random #include 랜덤이랑 같은 것임
 
 class MyMusic:
-    def __init__(self, title, artist, rating):
-        self.title = title
-        self.artist = artist
-        self.rating = rating #생성자 뭐시기
+    def __init__(self, title : str, artist : str, rating : int):
+        self.title : str = title
+        self.artist : str = artist
+        self.rating : int = int(rating) #생성자 뭐시기
 
     def Rec(self):
         self.rating += 1;
