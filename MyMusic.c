@@ -66,6 +66,16 @@ int main() {
             .title = "Snow(Hey oh)",
             .artist = "Red Hot Chili Peppers",
             .rating = 9
+        },
+        {
+            .title = "Kids",
+            .artist = "MGMT",
+            .rating = 8
+        },
+        {
+            .title = "Erase your Social",
+            .artist = "Lil Uzi Vert",
+            .rating = 8
         }
     };
 
