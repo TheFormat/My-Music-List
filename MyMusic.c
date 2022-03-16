@@ -16,7 +16,7 @@ void Rec(MyMusic* i) {
 
 
 int main() {
-    MyMusic m[10] = {
+    MyMusic m[] = { //m[] 숫자 없애면 배열 개수 지알아서 
         {
             .title = "AHHA",
             .artist = "Nate Ruess",
