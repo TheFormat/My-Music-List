@@ -24,6 +24,7 @@ m = [
     MyMusic("Snow(Hey oh)", "Red Hot Chili Peppers", 9),
     MyMusic("Kids", "MGMT", 8),
     MyMusic("Erase your Social", "Lil Uzi Vert", 8)
+    MyMusic("I Miss You", "blink-182", 9)
 ] # 리스트
 
 m[random.randrange(0, len(m))].Rec() #랜덤추천으로 바꿈, "리스트 안에 있는 요소"."함수" 이렇게 쓴다.->이것이 객체지향프로그래밍
