@@ -76,6 +76,16 @@ int main() {
             .title = "Erase your Social",
             .artist = "Lil Uzi Vert",
             .rating = 8
+        },
+        {
+            .title = "I Miss You",
+            .artist = "blink-182",
+            .rating = 9
+        },
+        {
+            .title = "I write Sins, not Tragedies",
+            .artist = "Panic! at the Disco",
+            .rating = 9
         }
     };
 
