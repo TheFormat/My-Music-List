@@ -10,10 +10,10 @@ class MyMusic {
         unsigned int rating;
     
     public :
-        void SetInfo(string title_, string artist_, unsigned int rating_ ) {
-            this -> title = title_;
-            this -> artist = artist_;
-            this -> rating = rating_;
+        void SetInfo(string title, string artist, unsigned int rating) {
+            this -> title = title; // private 안의 변수와 public 안 변수가 이름이 같을 때, this포인터 사용 
+            this -> artist = artist; // 하지만 변수 이름이 다르다면 굳이 할 필요가 없다.
+            this -> rating = rating; // ex) title_로 해놓고 title = title_하면 된다.
         }
         
         void ShowSong() {
