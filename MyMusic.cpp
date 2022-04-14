@@ -66,14 +66,3 @@ int main() {
 
     return 0;
 }
-int main() {
-    MyMusic m1;
-    MyMusic m2;
-    m1.SetInfo("AHHA", "Nate Ruess", 8);
-    m2.SetInfo("Runaway", "Kanye West", 9);
-    m1.ShowSong();
-    m2.ShowSong();
-
-
-    return 0;
-}
