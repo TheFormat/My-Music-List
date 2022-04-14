@@ -20,6 +20,8 @@ class MyMusic {
             cout << "This song is " << title << " by " << artist << "." << endl;
             cout << "My rating is " << rating << "!" << endl;
         }
+            
+
         /*TodayRec() {
             random_device rd;   
             mt19937 gen(rd());
@@ -45,6 +47,17 @@ class MusicList {
         void setMusicList() {
             addMusic("AHHA", "Nate Ruess", 8);
             addMusic("Runaway", "Kanye West", 9);
+            addMusic("Grace Kelly", "MIKA", 7);
+            addMusic("Gansta's Paradise", "Coolio", 8);
+            addMusic("Sunday Candy", "Chance the Rapper", 8);
+            addMusic("Fuck You", "Cee Lo Green", 8);
+            addMusic("Summertime Sadness", "Lana Del Rey", 8);
+            addMusic("In Your Eyes", "The Weeknd", 9);
+            addMusic("Boulevard of Broken Dreams", "Green Day", 7);
+            addMusic("Snow(Hey oh)", "Red Hot Chili Peppers", 9);
+            addMusic("Kids", "MGMT", 8);
+            addMusic("Erase your Social", "Lil Uzi Vert", 8);
+            addMusic("I Miss You", "blink-182", 9);
         }
         
         void showMusicList() {
@@ -52,13 +65,23 @@ class MusicList {
                 m[i].showSong();
             }
         }
+        void todayRec() {
+            random_device rd;   
+            mt19937 gen(rd());
+            uniform_int_distribution<int> dis(0,music_list_size);
+            cout << "*****Reccomendation*****" << endl;
+            m[dis(gen)].showSong();
+        }
 };
+
 
 void magicFunction() {
     MusicList my_music_list;
     
     my_music_list.setMusicList();
     my_music_list.showMusicList();
+    
+    my_music_list.todayRec();
 }
 
 int main() {
