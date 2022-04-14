@@ -20,19 +20,12 @@ class MyMusic {
             cout << "This song is " << title << " by " << artist << "." << endl;
             cout << "My rating is " << rating << "!" << endl;
         }
+        // 필터링하기..근데 어케하지 void filterTitle() {
             
-
-        /*TodayRec() {
-            random_device rd;   
-            mt19937 gen(rd());
-            uniform_int_distribution<int> dis();
-            cout << "Today's song is ->" << MyMusic.title << endl;
-        }
-        사실 이부분 어케할지 좀 고민중...*/
 };
 
 
-class MusicList {
+class EveryMusicList {
     private :
         MyMusic m[100];
         int music_list_size = 0;
@@ -75,8 +68,10 @@ class MusicList {
 };
 
 
+
+
 void magicFunction() {
-    MusicList my_music_list;
+    EveryMusicList my_music_list;
     
     my_music_list.setMusicList();
     my_music_list.showMusicList();
