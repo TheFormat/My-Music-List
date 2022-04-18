@@ -11,17 +11,31 @@ class MyMusic {
     
     public :
         void setInfo(string title, string artist, unsigned int rating) {
-            this -> title = title; // private 안의 변수와 public 안 변수가 이름이 같을 때, this포인터 사용 
-            this -> artist = artist; // 하지만 변수 이름이 다르다면 굳이 할 필요가 없다.
-            this -> rating = rating; // ex) title_로 해놓고 title = title_하면 된다.
+            this->title = title; // private 안의 변수와 public 안 변수가 이름이 같을 때, this포인터 사용 
+            this->artist = artist; // 하지만 변수 이름이 다르다면 굳이 할 필요가 없다.
+            this->rating = rating; // ex) title_로 해놓고 title = title_하면 된다.
         }
         
         void showSong() {
             cout << "This song is " << title << " by " << artist << "." << endl;
             cout << "My rating is " << rating << "!" << endl;
         }
-        // 필터링하기..근데 어케하지 void filterTitle() {
-            
+        
+        string getArtist() {
+            return artist;
+        }
+        
+        int getRating() {
+            return rating;
+        }
+        
+        void setArtist(string artist) {
+            this->artist = artist;
+        } // setter는 언제쓰는거지..여기서 필요하나
+        
+        void setRating(int rating) {
+            this->rating = rating;
+        }
 };
 
 
@@ -59,6 +73,7 @@ class EveryMusicList {
             addMusic("La La Land", "Demi Lovato", 5);
             addMusic("She Knows", "J.Cole", 6);
             addMusic("Taco Tuesday", "Migos", 4);
+            addMusic("Less than Zero", "The Weeknd", 8);
         }
         
         void showMusicList() {
@@ -66,12 +81,30 @@ class EveryMusicList {
                 m[i].showSong();
             }
         }
+        
         void todayRec() {
             random_device rd;   
             mt19937 gen(rd());
             uniform_int_distribution<int> dis(0,music_list_size);
-            cout << "*****Reccomendation*****" << endl;
+            cout << "**********Reccomendation**********" << endl;
             m[dis(gen)].showSong();
+            cout << "**********Reccomendation**********" << endl;
+        }
+        
+        void filterArtist(string artist_) {
+            for(int i = 0; i < music_list_size; ++i) {
+                if(m[i].getArtist() == artist_) {
+                    m[i].showSong();
+                }
+            }
+        }
+    
+        void filterRating(int rating_) {
+            for(int i = 0; i < music_list_size; ++i) {
+                if(m[i].getRating() == rating_) {
+                    m[i].showSong();
+                }
+            }
         }
 };
 
@@ -82,13 +115,13 @@ void magicFunction() {
     EveryMusicList my_music_list;
     
     my_music_list.setMusicList();
-    my_music_list.showMusicList();
-    
     my_music_list.todayRec();
+    my_music_list.filterArtist("The Weeknd");
+    my_music_list.filterRating(7);
 }
 
 int main() {
     magicFunction();
-
+    
     return 0;
 }
