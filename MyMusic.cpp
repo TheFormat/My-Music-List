@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void print(string line) {
+    printf("%s\n", line.c_str());
+}
+
 class MyMusic {
     private :
         string title;
@@ -31,7 +35,7 @@ class MyMusic {
         
         void setArtist(string artist) {
             this->artist = artist;
-        } // setter는 언제쓰는거지..여기서 필요하나
+        }
         
         void setRating(unsigned int rating) {
             this->rating = rating;
@@ -69,11 +73,26 @@ class EveryMusicList {
             addMusic("Numb", "Linkin Park", 5);
             addMusic("Finesse", "Bruno Mars", 6);
             addMusic("Pursuit of Happiness", "Kid Cudi", 8);
-            addMusic("I Miss You", "blink-182", 6);
             addMusic("La La Land", "Demi Lovato", 5);
             addMusic("She Knows", "J.Cole", 6);
             addMusic("Taco Tuesday", "Migos", 4);
             addMusic("Less than Zero", "The Weeknd", 8);
+            addMusic("Bittersweet Poetry", "Kanye West", 9);
+            addMusic("Through the Wire", "Kanye West", 8);
+            addMusic("Two Words", "Kanye West", 7);
+            addMusic("Is there Someone Else?", "The Weeknd", 8);
+            addMusic("She doesn't get it", "The Format", 6);
+            addMusic("The First Single", "The Format", 8);
+            addMusic("Famous Last Words", "My Chemical Romance", 9);
+            addMusic("My Shot", "Hamilton: The Musical", 10);
+            addMusic("Cool for the Summer", "Demi Lovato", 7);
+            addMusic("Helena", "My Chemical Romance", 10);
+            addMusic("Scott Mescudi Vs. The World", "Kid Cudi", 9);
+            addMusic("Man on the Moon", "Kid Cudi", 9);
+            addMusic("Dear Jealousy", "MIKA", 5);
+            addMusic("Headlights", "Eminem", 8);
+            addMusic("Armed and Dangerous", "Juice Wrld", 8);
+            addMusic("Topanga", "Trippie Redd", 8);
         }
         
         void showMusicList() {
@@ -86,25 +105,29 @@ class EveryMusicList {
             random_device rd;   
             mt19937 gen(rd());
             uniform_int_distribution<int> dis(0,music_list_size - 1);
-            cout << "**********Recommendation**********" << endl;
+            cout << "**********  Recommendation  **********" << endl;
             m[dis(gen)].showSong();
-            cout << "**********Recommendation**********" << endl;
+            cout << "**********  Recommendation  **********" << endl;
         }
         
         void filterArtist(string artist_) {
+            print("********** Artist : " + artist_ + " **********"); // 이런식으로 가능하다..
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getArtist() == artist_) {
                     m[i].showSong();
                 }
             }
+            print("********** Artist : " + artist_ + " **********");
         }
         
         void filterRating(unsigned int rating_) {
+            print("********** Rating : " + to_string(rating_) + " **********");
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getRating() == rating_) {
                     m[i].showSong();
                 }
             }
+            print("********** Rating : " + to_string(rating_) + " **********");
         }
 };
 
@@ -117,7 +140,7 @@ void magicFunction() {
     my_music_list.setMusicList();
     my_music_list.todayRec();
     my_music_list.filterArtist("The Weeknd");
-    my_music_list.filterRating(7);
+    my_music_list.filterRating(5);
 }
 
 int main() {
