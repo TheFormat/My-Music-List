@@ -33,7 +33,7 @@ class MyMusic {
             this->artist = artist;
         } // setter는 언제쓰는거지..여기서 필요하나
         
-        void setRating(int rating) {
+        void setRating(unsigned int rating) {
             this->rating = rating;
         }
 };
@@ -85,10 +85,10 @@ class EveryMusicList {
         void todayRec() {
             random_device rd;   
             mt19937 gen(rd());
-            uniform_int_distribution<int> dis(0,music_list_size);
-            cout << "**********Reccomendation**********" << endl;
+            uniform_int_distribution<int> dis(0,music_list_size - 1);
+            cout << "**********Recommendation**********" << endl;
             m[dis(gen)].showSong();
-            cout << "**********Reccomendation**********" << endl;
+            cout << "**********Recommendation**********" << endl;
         }
         
         void filterArtist(string artist_) {
@@ -98,8 +98,8 @@ class EveryMusicList {
                 }
             }
         }
-    
-        void filterRating(int rating_) {
+        
+        void filterRating(unsigned int rating_) {
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getRating() == rating_) {
                     m[i].showSong();
@@ -123,5 +123,6 @@ void magicFunction() {
 int main() {
     magicFunction();
     
+
     return 0;
 }
