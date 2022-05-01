@@ -56,24 +56,24 @@ class EveryMusicList {
     
     public : 
         void setMusicList() {
-            addMusic("AHHA", "Nate Ruess", 7);
+            addMusic("AHHA", "Nate Ruess", 8);
             addMusic("Runaway", "Kanye West", 9);
             addMusic("Grace Kelly", "MIKA", 4);
             addMusic("Gansta's Paradise", "Coolio", 6);
             addMusic("Sunday Candy", "Chance the Rapper", 6);
-            addMusic("Fuck You", "Cee Lo Green", 7);
-            addMusic("Summertime Sadness", "Lana Del Rey", 7);
+            addMusic("Fuck You", "Cee Lo Green", 6);
+            addMusic("Summertime Sadness", "Lana Del Rey", 6);
             addMusic("In Your Eyes", "The Weeknd", 8);
             addMusic("Boulevard of Broken Dreams", "Green Day", 3);
-            addMusic("Snow(Hey oh)", "Red Hot Chili Peppers", 4);
-            addMusic("Kids", "MGMT", 6);
+            addMusic("Snow(Hey oh)", "Red Hot Chili Peppers", 5);
+            addMusic("Kids", "MGMT", 5);
             addMusic("Erase your Social", "Lil Uzi Vert", 7);
             addMusic("I Miss You", "blink-182", 6);
             addMusic("There's a good reason these tables are numbered", "Panic! at the disco", 7);
             addMusic("Numb", "Linkin Park", 5);
             addMusic("Finesse", "Bruno Mars", 6);
             addMusic("Pursuit of Happiness", "Kid Cudi", 8);
-            addMusic("La La Land", "Demi Lovato", 5);
+            addMusic("La La Land", "Demi Lovato", 4);
             addMusic("She Knows", "J.Cole", 6);
             addMusic("Taco Tuesday", "Migos", 4);
             addMusic("Less than Zero", "The Weeknd", 8);
@@ -81,18 +81,19 @@ class EveryMusicList {
             addMusic("Through the Wire", "Kanye West", 8);
             addMusic("Two Words", "Kanye West", 7);
             addMusic("Is there Someone Else?", "The Weeknd", 8);
-            addMusic("She doesn't get it", "The Format", 6);
+            addMusic("She doesn't get it", "The Format", 5);
             addMusic("The First Single", "The Format", 8);
             addMusic("Famous Last Words", "My Chemical Romance", 9);
             addMusic("My Shot", "Hamilton: The Musical", 10);
             addMusic("Cool for the Summer", "Demi Lovato", 7);
             addMusic("Helena", "My Chemical Romance", 10);
-            addMusic("Scott Mescudi Vs. The World", "Kid Cudi", 9);
+            addMusic("Scott Mescudi Vs. The World", "Kid Cudi", 8);
             addMusic("Man on the Moon", "Kid Cudi", 9);
             addMusic("Dear Jealousy", "MIKA", 5);
-            addMusic("Headlights", "Eminem", 8);
-            addMusic("Armed and Dangerous", "Juice Wrld", 8);
-            addMusic("Topanga", "Trippie Redd", 8);
+            addMusic("Headlights", "Eminem", 7);
+            addMusic("Armed and Dangerous", "Juice Wrld", 7);
+            addMusic("Topanga", "Trippie Redd", 7);
+            addMusic("Roses", "OutKast", 6);
         }
         
         void showMusicList() {
@@ -121,7 +122,7 @@ class EveryMusicList {
         }
         
         void filterRating(unsigned int rating_) {
-            print("********** Rating : " + to_string(rating_) + " **********");
+            print("********** Rating : " + to_string(rating_) + " **********"); // int를 string으로!
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getRating() == rating_) {
                     m[i].showSong();
