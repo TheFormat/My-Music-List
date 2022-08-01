@@ -23,22 +23,22 @@ class MyMusic {
         void showSong() {
             cout << "This song is " << title << " by " << artist << "." << endl;
             cout << "My rating is " << rating << "!" << endl;
-        }
+        } // 노래, 아티스트, 점수 보여주기
         
         string getArtist() {
             return artist;
-        }
+        } // 아티스트 필터 getter
         
         int getRating() {
             return rating;
-        }
+        } // 점수 필터 getter
         
         void setArtist(string artist) {
             this->artist = artist;
-        }
+        } // 아티스트 필터 setter
         
         void setRating(unsigned int rating) {
-            this->rating = rating;
+            this->rating = rating; // 점수 필터 setter
         }
 };
 
@@ -106,29 +106,29 @@ class EveryMusicList {
             random_device rd;   
             mt19937 gen(rd());
             uniform_int_distribution<int> dis(0,music_list_size - 1);
-            cout << "**********  Recommendation  **********" << endl;
+            cout << "**********    Recommendation    **********" << endl;
             m[dis(gen)].showSong();
-            cout << "**********  Recommendation  **********" << endl;
+            cout << "**********    Recommendation    **********" << endl;
         }
         
         void filterArtist(string artist_) {
-            print("********** Artist : " + artist_ + " **********"); // 이런식으로 가능하다..
+            print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다..
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getArtist() == artist_) {
                     m[i].showSong();
                 }
             }
-            print("********** Artist : " + artist_ + " **********");
+            print("**********  Artist : " + artist_ + " **********");
         }
         
         void filterRating(unsigned int rating_) {
-            print("********** Rating : " + to_string(rating_) + " **********"); // int를 string으로!
+            print("**********      Rating : " + to_string(rating_) + "      **********"); // int를 string으로!
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getRating() == rating_) {
                     m[i].showSong();
                 }
             }
-            print("********** Rating : " + to_string(rating_) + " **********");
+            print("**********      Rating : " + to_string(rating_) + "      **********");
         }
 };
 
