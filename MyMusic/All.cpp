@@ -112,7 +112,7 @@ class EveryMusicList {
         }
         
         void filterArtist(string artist_) {
-            print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다..
+            print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다!
             for(int i = 0; i < music_list_size; ++i) {
                 if(m[i].getArtist() == artist_) {
                     m[i].showSong();
