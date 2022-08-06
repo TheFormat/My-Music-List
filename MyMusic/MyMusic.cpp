@@ -5,7 +5,7 @@
 using namespace std;
 
 void print(string line) {
-    printf("%s\n", line.c_str());
+    printf("%s\n", line.c_str()); // printf하고 줄바꾸는 걸 하기 위해. 그리고 c_str은 c 스타일의 string이다.
 }
 
 class MyMusic {
