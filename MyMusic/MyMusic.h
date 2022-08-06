@@ -1,7 +1,6 @@
 #ifndef MYMUSIC_H
-
-
 #define MYMUSIC_H
+
 void print(string line) {
     
 } // 출력 함수
@@ -55,8 +54,7 @@ class EveryMusicList {
         
         void showMusicList() {
 
-            } // 노래 보여주기
-        }
+        } // 노래 보여주기
         
         void todayRec() {
 
@@ -71,3 +69,4 @@ class EveryMusicList {
         } // 점수 별 검색
 };
 
+#endif
