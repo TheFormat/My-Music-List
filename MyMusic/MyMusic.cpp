@@ -1,4 +1,4 @@
-#include "MyMusic.h"    // 보통 헤더파일을 구현하는 소스파일에서는 해당 헤더파일을 가장 위에 include 해줌
+#include "MyMusic.hpp"    // 보통 헤더파일을 구현하는 소스파일에서는 해당 헤더파일을 가장 위에 include 해줌
 
 #include <iostream>     // 그리고나서 보통 한줄 띄고 필요한 헤더들을 include 해줌
 #include <random>
