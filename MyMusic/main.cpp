@@ -14,5 +14,5 @@ void magicFunction() {
 int main() {
     magicFunction();
     
-    retrun 0;
+    return 0;
 }
