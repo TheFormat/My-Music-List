@@ -10,7 +10,7 @@ void print(string line) {
     printf("%s\n", line.c_str()); // printf하고 줄바꾸는 걸 하기 위해. 그리고 c_str은 c 스타일의 string이다.
 }
 
-void MyMusic::setInfo(string title, string artist, unsigned int rating) {
+void MyMusic::setInfo(string title, string artist, unsigned int rating) { // :: 로 클래스 접근
     this->title = title; // private 안의 변수와 public 안 변수가 이름이 같을 때, this포인터 사용 
     this->artist = artist; // 하지만 변수 이름이 다르다면 굳이 할 필요가 없다.
     this->rating = rating; // ex) title_로 해놓고 title = title_하면 된다.
@@ -83,6 +83,31 @@ void EveryMusicList::setMusicList() {
     addMusic("Armed and Dangerous", "Juice Wrld", 7);
     addMusic("Topanga", "Trippie Redd", 7);
     addMusic("Roses", "OutKast", 6);
+    addMusic("Save your Tears", "The Weeknd", 8);
+    addMusic("Scared to Live", "The Weeknd", 7);
+    addMusic("Hardest to Love", "The Weeknd", 6);
+    addMusic("Sky Might Fall", "Kid Cudi", 8);
+    addMusic("Simple as..", "Kid Cudi", 5);
+    addMusic("Heart of a Lion", "Kid Cudi", 7);
+    addMusic("Stars in the Sky", "Kid Cudi", 7);
+    addMusic("Up Up & Away", "Kid Cudi", 7);
+    addMusic("All Along", "Kid Cudi", 5);
+    addMusic("Mojo so Dope", "Kid Cudi", 7);
+    addMusic("Trapped in my Mind", "Kid Cudi", 7);
+    addMusic("GHOST!", "Kid Cudi", 7);
+    addMusic("Marijuana", "Kid Cudi", 6);
+    addMusic("Mr.Brightside", "The Killers", 8);
+    addMusic("Love you like a Love Song", "Selena Gomez", 3);
+    addMusic("I Write Sins Not Tragedies", "Panic! at the disco", 8);
+    addMusic("Lyin is the Most Fun a Girl can Have without Taking her Clothes Off", "Panic! at the disco", 7);
+    addMusic("LA Devotee", "Panic! at the disco", 4);
+    addMusic("Work out", "J.Cole", 4);
+    addMusic("Can't Take Enough", "J.Cole", 4);
+    addMusic("Washington's on Your Side", "Hamilton: The Musical", 9);
+    addMusic("7 Things", "Miley Cyrus", 7);
+    addMusic("We Can't Stop", "Miley Cyrus", 4);
+    addMusic("Wrecking Ball", "Miley Cyrus", 3);
+
 }
 
 void EveryMusicList::showMusicList() {
