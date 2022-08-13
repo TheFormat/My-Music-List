@@ -1,5 +1,5 @@
-#ifndef MYMUSIC_H
-#define MYMUSIC_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
 #include <string>
 

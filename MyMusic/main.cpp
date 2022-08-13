@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MyMusic.hpp"
+#include "Functions.hpp"
 
 using namespace std;
 void magicFunction() {

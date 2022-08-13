@@ -1,4 +1,4 @@
-#include "MyMusic.hpp"    // 보통 헤더파일을 구현하는 소스파일에서는 해당 헤더파일을 가장 위에 include 해줌
+#include "Functions.hpp"    // 보통 헤더파일을 구현하는 소스파일에서는 해당 헤더파일을 가장 위에 include 해줌
 
 #include <iostream>     // 그리고나서 보통 한줄 띄고 필요한 헤더들을 include 해줌
 #include <random>
@@ -107,6 +107,13 @@ void EveryMusicList::setMusicList() {
     addMusic("7 Things", "Miley Cyrus", 7);
     addMusic("We Can't Stop", "Miley Cyrus", 4);
     addMusic("Wrecking Ball", "Miley Cyrus", 3);
+    addMusic("Cementry Drive", "My Chemical Romance", 5);
+    addMusic("Far Too Yound to Die", "Panic! at the disco", 4);
+    addMusic("So Appalled", "Kanye West", 7);
+    addMusic("Spaceship", "Kanye West", 4);
+    addMusic("All Falls Down", "Kanye West", 5);
+    addMusic("Never Let Me Down", "Kanye West", 8);
+    addMusic("i", "Kendrick Lamar", 9);
 
 }
 
