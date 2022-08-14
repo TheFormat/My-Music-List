@@ -4,12 +4,12 @@
 
 using namespace std;
 void magicFunction() {
-    EveryMusicList my_music_list;
+    MyMusicList my_music_list;
     
-    my_music_list.setMusicList();
+    my_music_list.makeMusicList();
     my_music_list.todayRec();
     my_music_list.filterArtist("The Weeknd");
-    my_music_list.filterRating(5);
+    my_music_list.filterMyRating(5);
 }
 
 int main() {
