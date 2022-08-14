@@ -17,7 +17,7 @@ class Functions {
         void showMusicList(); // 노래 보여주기
         void todayRec(); // 오늘의 추천
         void filterArtist(std::string artist_); // 아티스트 검색
-        void filterRating(unsigned int rating_); // 점수 별 검색
+        void filterMyRating(unsigned int my_rating_); // 점수 별 검색
 };
 
 #endif
