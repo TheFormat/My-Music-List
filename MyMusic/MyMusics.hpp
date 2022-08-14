@@ -10,7 +10,7 @@ class MyMusic {
         unsigned int my_rating;
 
     public :
-        void Info(std::string title, std::string artist, unsigned int my_rating);
+        void setInfo(std::string title, std::string artist, unsigned int my_rating);
         void showSong();
         std::string getArtist();
         int getRating();
