@@ -9,7 +9,7 @@
 void print(std::string line); // 출력 함수
 
 class Functions {
-    private :
+    public :
         MyMusicList my_music_list;
         
 

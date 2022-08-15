@@ -27,7 +27,7 @@ class MyMusicList {
 
     public :
         void makeMusicList();
-        friend class Functions;
+        friend class Functions; // friend 선언함으로써 접근 가능
 };
 
 #endif
