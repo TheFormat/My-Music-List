@@ -1,51 +1,44 @@
-#include "MyMusic.hpp"    // 보통 헤더파일을 구현하는 소스파일에서는 해당 헤더파일을 가장 위에 include 해줌
+#include "MyMusics.hpp"
 
-#include <iostream>     // 그리고나서 보통 한줄 띄고 필요한 헤더들을 include 해줌
-#include <random>
+#include <iostream>
 
-using namespace std;    // cpp파일에서는 using namespace를 사용해도 헤더파일을 include하는 파일에서 영향을 안받기 때문에 해줘도 좋음 
+using namespace std;
 
-// 나는 using 구문 이후로 두줄정도 떼고 본문 작성하는 편임. include 부분이랑 본문이랑 구분감이 생겨서 좋은듯
-void print(string line) {
-    printf("%s\n", line.c_str()); // printf하고 줄바꾸는 걸 하기 위해. 그리고 c_str은 c 스타일의 string이다.
-}
 
-void MyMusic::setInfo(string title, string artist, unsigned int rating) { // :: 로 클래스 접근
-    this->title = title; // private 안의 변수와 public 안 변수가 이름이 같을 때, this포인터 사용 
-    this->artist = artist; // 하지만 변수 이름이 다르다면 굳이 할 필요가 없다.
-    this->rating = rating; // ex) title_로 해놓고 title = title_하면 된다.
+void MyMusic::setInfo(std::string title, std::string artist, unsigned int my_rating){
+	this->title = title;
+	this->artist = artist;
+	this->my_rating = my_rating;
 }
 
 void MyMusic::showSong() {
-    cout << "This song is " << title << " by " << artist << "." << endl;
-    cout << "My rating is " << rating << "!" << endl;
-} // 노래, 아티스트, 점수 보여주기
+	cout << "This song is " << title << " by " << artist << "." << endl;
+    cout << "My rating is " << my_rating << "!" << endl;
+}
 
-string MyMusic::getArtist() {
-    return artist;
-} // 아티스트 필터 getter
+std::string MyMusic::getArtist() {
+	return artist;
+}
 
-int MyMusic::getRating() {
-    return rating;
-} // 점수 필터 getter
+int MyMusic::getMyRating() {
+	return my_rating;
+}
 
 void MyMusic::setArtist(string artist) {
-    this->artist = artist;
-} // 아티스트 필터 setter
-
-void MyMusic::setRating(unsigned int rating) {
-    this->rating = rating; // 점수 필터 setter
+	this->artist = artist;
 }
 
-
-void EveryMusicList::addMusic(string title, string artist, int rating) {
-    m[music_list_size].setInfo(title, artist, rating);
-    music_list_size += 1;
-    
+void MyMusic::setMyRating(unsigned int my_rating) {
+	this->my_rating = my_rating;
 }
 
-void EveryMusicList::setMusicList() {
-    addMusic("AHHA", "Nate Ruess", 8);
+void MyMusicList::addMusic(string title, string artist, unsigned int my_rating) {
+	m[num_of_musics].setInfo(title, artist, my_rating);
+	num_of_musics += 1;
+}
+
+void MyMusicList::makeMusicList() {
+	addMusic("AHHA", "Nate Ruess", 8);
     addMusic("Runaway", "Kanye West", 9);
     addMusic("Grace Kelly", "MIKA", 4);
     addMusic("Gansta's Paradise", "Coolio", 6);
@@ -114,40 +107,4 @@ void EveryMusicList::setMusicList() {
     addMusic("All Falls Down", "Kanye West", 5);
     addMusic("Never Let Me Down", "Kanye West", 8);
     addMusic("i", "Kendrick Lamar", 9);
-
-}
-
-void EveryMusicList::showMusicList() {
-    for(int i = 0; i < music_list_size; ++i) {
-        m[i].showSong();
-    }
-}
-
-void EveryMusicList::todayRec() {
-    random_device rd;   
-    mt19937 gen(rd());
-    uniform_int_distribution<int> dis(0,music_list_size - 1);
-    cout << "**********    Recommendation    **********" << endl;
-    m[dis(gen)].showSong();
-    cout << "**********    Recommendation    **********" << endl;
-}
-
-void EveryMusicList::filterArtist(string artist_) {
-    print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다!
-    for(int i = 0; i < music_list_size; ++i) {
-        if(m[i].getArtist() == artist_) {
-            m[i].showSong();
-        }
-    }
-    print("**********  Artist : " + artist_ + " **********");
-}
-
-void EveryMusicList::filterRating(unsigned int rating_) {
-    print("**********      Rating : " + to_string(rating_) + "      **********"); // int를 string으로!
-    for(int i = 0; i < music_list_size; ++i) {
-        if(m[i].getRating() == rating_) {
-            m[i].showSong();
-        }
-    }
-    print("**********      Rating : " + to_string(rating_) + "      **********");
 }
