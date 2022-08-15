@@ -19,6 +19,7 @@ class MyMusic {
 };
 
 class MyMusicList {
+	friend class Functions;
     private :
         MyMusic m[100];
         int num_of_musics = 0;
@@ -27,6 +28,8 @@ class MyMusicList {
 
     public :
         void makeMusicList();
+	
+	
 };
 
 #endif

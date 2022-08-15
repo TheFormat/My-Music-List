@@ -107,44 +107,4 @@ void MyMusicList::makeMusicList() {
     addMusic("All Falls Down", "Kanye West", 5);
     addMusic("Never Let Me Down", "Kanye West", 8);
     addMusic("i", "Kendrick Lamar", 9);
-<<<<<<< HEAD:MyMusic/MyMusics.cpp
 }
-=======
-
-}
-
-void EveryMusicList::showMusicList() {
-    for(int i = 0; i < music_list_size; ++i) {
-        m[i].showSong();
-    }
-}
-
-void EveryMusicList::todayRec() {
-    random_device rd;   
-    mt19937 gen(rd());
-    uniform_int_distribution<int> dis(0,music_list_size - 1);
-    cout << "**********    Recommendation    **********" << endl;
-    m[dis(gen)].showSong();
-    cout << "**********    Recommendation    **********" << endl;
-}
-
-void EveryMusicList::filterArtist(string artist_) {
-    print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다!
-    for(int i = 0; i < music_list_size; ++i) {
-        if(m[i].getArtist() == artist_) {
-            m[i].showSong();
-        }
-    }
-    print("**********  Artist : " + artist_ + " **********");
-}
-
-void EveryMusicList::filterRating(unsigned int rating_) {
-    print("**********      Rating : " + to_string(rating_) + "      **********"); // int를 string으로!
-    for(int i = 0; i < music_list_size; ++i) {
-        if(m[i].getRating() == rating_) {
-            m[i].showSong();
-        }
-    }
-    print("**********      Rating : " + to_string(rating_) + "      **********");
-}
->>>>>>> main:MyMusic/MyMusic.cpp
