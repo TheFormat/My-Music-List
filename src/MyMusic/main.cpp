@@ -8,8 +8,8 @@ void magicFunction() {
     
     function.my_music_list.makeMusicList();
     function.todayRec();
-    function.filterArtist("The Weeknd");
-    function.filterMyRating(6);
+    function.filterArtist("Kid Cudi");
+    function.filterMyRating(4);
 }
 
 int main() {
