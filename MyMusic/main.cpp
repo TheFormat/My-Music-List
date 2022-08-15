@@ -4,12 +4,12 @@
 
 using namespace std;
 void magicFunction() {
-    MyMusicList my_music_list;
+    Functions function;
     
-    my_music_list.makeMusicList();
-    my_music_list.todayRec();
-    my_music_list.filterArtist("The Weeknd");
-    my_music_list.filterMyRating(5);
+    function.my_music_list.makeMusicList();
+    function.todayRec();
+    function.filterArtist("The Weeknd");
+    function.filterMyRating(6);
 }
 
 int main() {

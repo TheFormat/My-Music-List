@@ -27,6 +27,7 @@ class MyMusicList {
 
     public :
         void makeMusicList();
+        friend class Functions;
 };
 
 #endif

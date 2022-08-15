@@ -11,6 +11,8 @@ void print(std::string line); // 출력 함수
 class Functions {
     private :
         MyMusicList my_music_list;
+        
+
         // 여기서 질문. 다른 클래스 속 priave 변수를 이 클래스에서 인식할 수 있나?
     public : 
         void showMusicList(); // 노래 보여주기
