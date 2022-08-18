@@ -3,6 +3,8 @@
 #include "Functions.hpp"
 
 using namespace std;
+
+
 void magicFunction() {
     Functions function;
     
