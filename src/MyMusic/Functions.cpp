@@ -26,21 +26,21 @@ void Functions::todayRec() {
 }
 
 void Functions::filterArtist(string artist_) {
-    print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다!
+    print("**********   Artist : " + artist_ + "  **********"); // 이런식으로 가능하다!
     for(int i = 0; i < my_music_list.num_of_musics; ++i) {
         if(my_music_list.m[i].getArtist() == artist_) {
             my_music_list.m[i].showSong();
         }
     }
-    print("**********  Artist : " + artist_ + " **********");
+    print("**********   Artist : " + artist_ + "  **********");
 }
 
 void Functions::filterMyRating(unsigned int my_rating_) {
-    print("**********      My Rating : " + to_string(my_rating_) + "      **********"); // int를 string으로!
+    print("**********    My Rating : " + to_string(my_rating_) + "     **********"); // int를 string으로!
     for(int i = 0; i < my_music_list.num_of_musics; ++i) {
         if(my_music_list.m[i].getMyRating() == my_rating_) {
             my_music_list.m[i].showSong();
         }
     }
-    print("**********      Rating : " + to_string(my_rating_) + "      **********");
+    print("**********    My Rating : " + to_string(my_rating_) + "     **********");
 }
