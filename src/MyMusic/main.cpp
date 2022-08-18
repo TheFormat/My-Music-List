@@ -10,6 +10,7 @@ void magicFunction() {
     function.todayRec();
     function.filterArtist("The Weeknd");
     function.filterMyRating(6);
+	function.filterYear(2021);
 }
 
 int main() {
