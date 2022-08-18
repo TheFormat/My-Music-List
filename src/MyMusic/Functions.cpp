@@ -44,3 +44,13 @@ void Functions::filterMyRating(unsigned int my_rating_) {
     }
     print("**********      Rating : " + to_string(my_rating_) + "      **********");
 }
+
+void Functions::filterYear(unsigned int year_) {
+	print("**********      Year : " + to_string(year_) + "      **********");
+	for(int i = 0; i < my_music_list.num_of_musics; ++i) {
+		if(my_music_list.m[i].getYear() == year_) {
+			my_music_list.m[i].showSong();
+		}
+	}
+	print("**********      Year : " + to_string(year_) + "      **********");
+}
