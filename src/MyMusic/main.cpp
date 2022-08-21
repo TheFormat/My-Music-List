@@ -8,9 +8,9 @@ void magicFunction() {
     
     function.my_music_list.makeMusicList();
     function.todayRec();
-    function.filterArtist("The Weeknd");
+    function.filterArtist("Kid Cudi");
     function.filterMyRating(6);
-	function.filterYear(2021);
+	function.filterYear(2015);
 }
 
 int main() {

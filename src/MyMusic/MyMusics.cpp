@@ -116,4 +116,6 @@ void MyMusicList::makeMusicList() {
     addMusic("All Falls Down", "Kanye West", 5, 2020);
     addMusic("Never Let Me Down", "Kanye West", 8, 2008);
     addMusic("i", "Kendrick Lamar", 9, 2021);
+	addMusic("Mr.Rager", "Kid Cudi", 6, 2020);
+	addMusic("Erase Me", "Kid Cudi", 7, 2020);
 }

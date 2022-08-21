@@ -22,7 +22,7 @@ void Functions::todayRec() {
     uniform_int_distribution<int> dis(0,my_music_list.num_of_musics - 1);
     cout << "**********    Recommendation    **********" << endl;
     my_music_list.m[dis(gen)].showSong();
-    cout << "**********    Recommendation    **********" << endl;
+    cout << "**********    Recommendation    **********" << endl << endl;
 }
 
 void Functions::filterArtist(string artist_) {
@@ -32,7 +32,7 @@ void Functions::filterArtist(string artist_) {
             my_music_list.m[i].showSong();
         }
     }
-    print("**********  Artist : " + artist_ + " **********");
+    print("**********  Artist : " + artist_ + " **********\n");
 }
 
 void Functions::filterMyRating(unsigned int my_rating_) {
@@ -42,7 +42,7 @@ void Functions::filterMyRating(unsigned int my_rating_) {
             my_music_list.m[i].showSong();
         }
     }
-    print("**********      Rating : " + to_string(my_rating_) + "      **********");
+    print("**********      Rating : " + to_string(my_rating_) + "      **********\n");
 }
 
 void Functions::filterYear(unsigned int year_) {
@@ -52,5 +52,5 @@ void Functions::filterYear(unsigned int year_) {
 			my_music_list.m[i].showSong();
 		}
 	}
-	print("**********      Year : " + to_string(year_) + "      **********");
+	print("**********      Year : " + to_string(year_) + "      **********\n");
 }
