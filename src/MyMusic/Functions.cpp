@@ -20,13 +20,13 @@ void Functions::todayRec() {
     random_device rd;   
     mt19937 gen(rd());
     uniform_int_distribution<int> dis(0,my_music_list.num_of_musics - 1);
-    cout << "**********    Recommendation    **********" << endl;
+    cout << "**********    Recommendation    **********" << endl << endl;
     my_music_list.m[dis(gen)].showSong();
     cout << "**********    Recommendation    **********" << endl << endl;
 }
 
 void Functions::filterArtist(string artist_) {
-    print("**********  Artist : " + artist_ + " **********"); // 이런식으로 가능하다!
+    print("**********  Artist : " + artist_ + " **********\n"); // 이런식으로 가능하다!
     for(int i = 0; i < my_music_list.num_of_musics; ++i) {
         if(my_music_list.m[i].getArtist() == artist_) {
             my_music_list.m[i].showSong();
@@ -36,7 +36,7 @@ void Functions::filterArtist(string artist_) {
 }
 
 void Functions::filterMyRating(unsigned int my_rating_) {
-    print("**********      My Rating : " + to_string(my_rating_) + "      **********"); // int를 string으로!
+    print("**********      My Rating : " + to_string(my_rating_) + "      **********\n"); // int를 string으로!
     for(int i = 0; i < my_music_list.num_of_musics; ++i) {
         if(my_music_list.m[i].getMyRating() == my_rating_) {
             my_music_list.m[i].showSong();
@@ -46,7 +46,7 @@ void Functions::filterMyRating(unsigned int my_rating_) {
 }
 
 void Functions::filterYear(unsigned int year_) {
-	print("**********      Year : " + to_string(year_) + "      **********");
+	print("**********      Year : " + to_string(year_) + "      **********\n");
 	for(int i = 0; i < my_music_list.num_of_musics; ++i) {
 		if(my_music_list.m[i].getYear() == year_) {
 			my_music_list.m[i].showSong();

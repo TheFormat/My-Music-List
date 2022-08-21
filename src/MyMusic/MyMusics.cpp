@@ -14,7 +14,7 @@ void MyMusic::setInfo(std::string title, std::string artist, unsigned int my_rat
 
 void MyMusic::showSong() {
 	cout << "This song is " << title << " by " << artist << "." << endl;
-    cout << "I knew this song in " << year << ", and " << "My rating is " << my_rating << "!" << endl;
+    cout << "I knew this song in " << year << ", and " << "My rating is " << my_rating << "!" << endl << endl;
 }
 
 std::string MyMusic::getArtist() {
