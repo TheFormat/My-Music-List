@@ -11,25 +11,40 @@ void print(string line) {
 }
 
 void Functions::showMusicList() {
-    for(int i = 0; i < my_music_list.num_of_musics; ++i) {
-        my_music_list.m[i].showSong();
-    }
+    for(auto e : MyMusicList::musics) {
+		e -> showSong(); // 자료구조 배열에서 리스트로 변경, e는 포인터니까 ->로 접근
+	}
 }
 
-void Functions::todayRec() {
-    random_device rd;   
+MyMusic* Functions::getRandomMusic() const {
+    random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<int> dis(0,my_music_list.num_of_musics - 1);
+    uniform_int_distribution<int> dis(0, MyMusicList::musics.size() - 1);
+    return getMusicAt(dis(gen));
+}
+
+MyMusic* Functions::getMusicAt(unsigned int index) const {
+    int cnt = 0;
+    for(auto e : MyMusicList::musics) {
+        if(cnt == index) {
+            return e;
+        }
+        cnt++;
+    }
+    return nullptr;
+}
+	
+void Functions::todayRec() {
     cout << "**********    Recommendation    **********" << endl << endl;
-    my_music_list.m[dis(gen)].showSong();
+	getRandomMusic() -> showSong();
     cout << "**********    Recommendation    **********" << endl << endl;
 }
 
 void Functions::filterArtist(string artist_) {
     print("**********  Artist : " + artist_ + " **********\n"); // 이런식으로 가능하다!
-    for(int i = 0; i < my_music_list.num_of_musics; ++i) {
-        if(my_music_list.m[i].getArtist() == artist_) {
-            my_music_list.m[i].showSong();
+    for(auto e : MyMusicList::musics) {
+        if(e->getArtist() == artist_) {
+            e->showSong();
         }
     }
     print("**********  Artist : " + artist_ + " **********\n");
@@ -37,9 +52,9 @@ void Functions::filterArtist(string artist_) {
 
 void Functions::filterMyRating(unsigned int my_rating_) {
     print("**********      My Rating : " + to_string(my_rating_) + "      **********\n"); // int를 string으로!
-    for(int i = 0; i < my_music_list.num_of_musics; ++i) {
-        if(my_music_list.m[i].getMyRating() == my_rating_) {
-            my_music_list.m[i].showSong();
+    for(auto e : MyMusicList::musics) {
+        if(e->getMyRating() == my_rating_) {
+            e->showSong();
         }
     }
     print("**********      Rating : " + to_string(my_rating_) + "      **********\n");
@@ -47,10 +62,10 @@ void Functions::filterMyRating(unsigned int my_rating_) {
 
 void Functions::filterYear(unsigned int year_) {
 	print("**********      Year : " + to_string(year_) + "      **********\n");
-	for(int i = 0; i < my_music_list.num_of_musics; ++i) {
-		if(my_music_list.m[i].getYear() == year_) {
-			my_music_list.m[i].showSong();
-		}
-	}
+    for(auto e : MyMusicList::musics) {
+        if(e->getYear() == year_) {
+            e->showSong();
+        }
+    }
 	print("**********      Year : " + to_string(year_) + "      **********\n");
 }

@@ -11,9 +11,11 @@ void print(std::string line); // 출력 함수
 class Functions {
     public:
         MyMusicList my_music_list;
-        // 여기서 질문. 다른 클래스 속 priave 변수를 이 클래스에서 인식할 수 있나?
+
     public : 
         void showMusicList(); // 노래 보여주기
+		MyMusic* getRandomMusic() const;
+		MyMusic* getMusicAt(unsigned int index) const;
         void todayRec(); // 오늘의 추천
         void filterArtist(std::string artist_); // 아티스트 검색
         void filterMyRating(unsigned int my_rating_); // 점수 별 검색

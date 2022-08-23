@@ -4,8 +4,12 @@
 
 using namespace std;
 
+MyMusic::MyMusic(std::string title, std::string artist, unsigned int my_rating, unsigned int year) : 
+title { title }, artist { artist }, my_rating { my_rating }, year { year } {
+	
+}
 
-void MyMusic::setInfo(std::string title, std::string artist, unsigned int my_rating, unsigned int year){
+void MyMusic::editInfo(std::string title, std::string artist, unsigned int my_rating, unsigned int year){
 	this->title = title;
 	this->artist = artist;
 	this->my_rating = my_rating;
@@ -42,8 +46,7 @@ void MyMusic::setYear(unsigned int year) {
 }
 
 void MyMusicList::addMusic(string title, string artist, unsigned int my_rating, unsigned int year) {
-	m[num_of_musics].setInfo(title, artist, my_rating, year);
-	num_of_musics += 1;
+	musics.push_back(new MyMusic { title, artist, my_rating, year}); // vector의 끝에 요소 추가..?
 }
 
 void MyMusicList::makeMusicList() {

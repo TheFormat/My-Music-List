@@ -2,6 +2,7 @@
 #define MYMUSICS_H
 
 #include <string>
+#include <list>
 
 class MyMusic {
     private :
@@ -11,7 +12,8 @@ class MyMusic {
 		unsigned int year;
 
     public :
-        void setInfo(std::string title, std::string artist, unsigned int my_rating, unsigned int year);
+		MyMusic(std::string title, std::string artist, unsigned int my_rating, unsigned int year); // 생성자 만듬
+        void editInfo(std::string title, std::string artist, unsigned int my_rating, unsigned int year);
         void showSong();
         std::string getArtist();
         int getMyRating();
@@ -24,12 +26,11 @@ class MyMusic {
 class MyMusicList {
 	friend class Functions;
     private :
-        MyMusic m[100];
-        int num_of_musics = 0;
 
         void addMusic(std::string title, std::string artist, unsigned int my_rating, unsigned int year);
-
     public :
+		std::list<MyMusic*> musics; // 배열 MyMusic m[100]에서 포인터를 저장해주는 리스트로 바꿈.	
+	
         void makeMusicList();
 	
 	
