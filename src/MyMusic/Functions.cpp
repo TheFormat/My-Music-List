@@ -11,7 +11,7 @@ void print(string line) {
 }
 
 void Functions::showMusicList() {
-    for(auto e : MyMusicList::musics) {
+    for(auto e : list<MyMusic*>::musics) {
 		e -> showSong(); // 자료구조 배열에서 리스트로 변경, e는 포인터니까 ->로 접근
 	}
 }
@@ -19,13 +19,13 @@ void Functions::showMusicList() {
 MyMusic* Functions::getRandomMusic() const {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<int> dis(0, MyMusicList::musics.size() - 1);
+    uniform_int_distribution<int> dis(0, list<MyMusic*>::musics.size() - 1);
     return getMusicAt(dis(gen));
 }
 
 MyMusic* Functions::getMusicAt(unsigned int index) const {
     int cnt = 0;
-    for(auto e : MyMusicList::musics) {
+    for(auto e : list<MyMusic*>::musics) {
         if(cnt == index) {
             return e;
         }
@@ -42,7 +42,7 @@ void Functions::todayRec() {
 
 void Functions::filterArtist(string artist_) {
     print("**********  Artist : " + artist_ + " **********\n"); // 이런식으로 가능하다!
-    for(auto e : MyMusicList::musics) {
+    for(auto e : list<MyMusic*>::musics) {
         if(e->getArtist() == artist_) {
             e->showSong();
         }
@@ -52,7 +52,7 @@ void Functions::filterArtist(string artist_) {
 
 void Functions::filterMyRating(unsigned int my_rating_) {
     print("**********      My Rating : " + to_string(my_rating_) + "      **********\n"); // int를 string으로!
-    for(auto e : MyMusicList::musics) {
+    for(auto e : list<MyMusic*>::musics) {
         if(e->getMyRating() == my_rating_) {
             e->showSong();
         }
@@ -62,7 +62,7 @@ void Functions::filterMyRating(unsigned int my_rating_) {
 
 void Functions::filterYear(unsigned int year_) {
 	print("**********      Year : " + to_string(year_) + "      **********\n");
-    for(auto e : MyMusicList::musics) {
+    for(auto e : list<MyMusic*>::musics) {
         if(e->getYear() == year_) {
             e->showSong();
         }
