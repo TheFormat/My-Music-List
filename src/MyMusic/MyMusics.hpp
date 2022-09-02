@@ -8,17 +8,17 @@ class MyMusic {
         std::string title;
         std::string artist;
         unsigned int my_rating;
-		unsigned int year;
+	unsigned int year;
 
     public :
         void setInfo(std::string title, std::string artist, unsigned int my_rating, unsigned int year);
         void showSong();
         std::string getArtist();
         int getMyRating();
-		int getYear();
+	int getYear();
         void setArtist(std::string artist);
         void setMyRating(unsigned int my_rating);
-		void setYear(unsigned int year);
+	void setYear(unsigned int year);
 };
 
 class MyMusicList {
