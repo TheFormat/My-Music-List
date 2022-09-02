@@ -17,7 +17,7 @@ class Functions {
         void todayRec(); // 오늘의 추천
         void filterArtist(std::string artist_); // 아티스트 검색
         void filterMyRating(unsigned int my_rating_); // 점수 별 검색
-		void filterYear(unsigned int year_); // 내가 안 시점 검색
+	void filterYear(unsigned int year_); // 내가 안 시점 검색
 };
 
 #endif
