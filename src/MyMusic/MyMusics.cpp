@@ -102,8 +102,10 @@ void MyMusicList::makeMusicList() {
 	addMusic("The First Single", "The Format", 8, 2019);
 	addMusic("AHHA", "Nate Ruess", 8, 2015);
 	addMusic("7 Things", "Miley Cyrus", 7, 2008);
+	addMusic("The Climb", "Miley Cyrus", 7, 2009);
 	addMusic("We Can't Stop", "Miley Cyrus", 4, 2015);
 	addMusic("Wrecking Ball", "Miley Cyrus", 3, 2015);
+	addMusic("Used to be Young", "Miley Cyrus", 7, 2024);
 	addMusic("Cool for the Summer", "Demi Lovato", 7, 2015);
 	addMusic("La La Land", "Demi Lovato", 4, 2008);
 	addMusic("Love you like a Love Song", "Selena Gomez", 3, 2014);
@@ -114,8 +116,16 @@ void MyMusicList::makeMusicList() {
 	addMusic("Boulevard of Broken Dreams", "Green Day", 3, 2014);
 	addMusic("Snow(Hey oh)", "Red Hot Chili Peppers", 5, 2022);
 	addMusic("Kids", "MGMT", 5, 2022);
-	addMusic("I Miss You", "blink-182", 6, 2022);
+	addMusic("I Miss You", "blink-182", 8, 2022);
+	addMusic("What's My Age Again?", "blink-182", 5, 2025);
+	addMusic("Dysentery Gary", "blink-182", 5, 2025);
+	addMusic("Adam's Song", "blink-182", 6, 2025);
+	addMusic("Always", "blink-182", 4, 2022);
+	addMusic("I Really Wish I Hated You", "blink-182", 4, 2024);
+	addMusic("One More Time", "blink-182", 4, 2024);
 	addMusic("Numb", "Linkin Park", 5, 2014);
+	addMusic("Crawling", "Linkin Park", 5, 2014);
 	addMusic("Finesse", "Bruno Mars", 6, 2017);
 	addMusic("Mr.Brightside", "The Killers", 8, 2022);
+	addMusic("Just Another Girl", "The Killers", 5, 2022);
 }
